@@ -86,3 +86,24 @@ h1 {
         transform: translateX(-50%) rotate(360deg);
     }
 }
+
+
+/*Making it responsive*/
+@media (max-width: 576px) {
+    .clock {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hour-hand {
+        height: 50px;
+    }
+
+    .minute-hand {
+        height: 70px;
+    }
+
+    .second-hand {
+        height: 90px;
+    }
+}
