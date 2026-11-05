@@ -18,7 +18,7 @@ h1 {
 .clock {
     width: 300px;
     height: 300px;
-    border: 5px solid #333;
+    border: 2px solid #333;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.34);
 
@@ -26,7 +26,6 @@ h1 {
     margin: 60px auto;
 }
 
-.hour-hand,
 .minute-hand,
 .second-hand {
     position: absolute;
@@ -36,45 +35,22 @@ h1 {
     border-radius: 5px;
 }
 
-.hour-hand {
-    width: 8px;
-    height: 70px;
-    background-color: black;
-    z-index: 2;
-
-    animation: rotateHand 43200s linear infinite;
-}
-
 .minute-hand {
-    width: 5px;
-    height: 100px;
-    background-color: blue;
-    z-index: 3;
-
-    animation: rotateHand 3600s linear infinite;
-}
-
-.second-hand {
-    width: 2px;
+    width: 1.5px;
     height: 120px;
-    background-color: red;
-    z-index: 4;
+    background-color: blue;
+    z-index: 2;
 
     animation: rotateHand 60s linear infinite;
 }
 
-.center-dot {
-    width: 14px;
-    height: 14px;
-    background-color: #333;
-    border-radius: 50%;
+.second-hand {
+    width: 2px;
+    height: 145px;
+    background-color: red;
+    z-index: 1;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    z-index: 5;
+    animation: rotateHand 20s linear infinite;
 }
 
 @keyframes rotateHand {
@@ -89,14 +65,10 @@ h1 {
 
 
 /*Making it responsive*/
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .clock {
         width: 200px;
         height: 200px;
-    }
-
-    .hour-hand {
-        height: 50px;
     }
 
     .minute-hand {
